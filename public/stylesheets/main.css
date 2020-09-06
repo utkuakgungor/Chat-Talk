@@ -1,0 +1,103 @@
+#livechat-container{
+    width: 100%;
+}
+
+.userlist{
+    height: 97%;
+        border: 1px solid #337ab7;
+}
+
+.info{
+    font-size: 12px;
+    font-style: italic;
+    margin: 10px;
+}
+
+#bottom-bar a {
+    float: left;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+    font-family: "proxima-nova",  "Source Sans Pro", sans-serif;
+}
+
+#chat-input{
+    width: 100%;
+}
+
+.chat{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li{
+    margin-bottom: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body{
+    margin-left: 5%;
+}
+
+.chat li.right .chat-body{
+    margin-right: 5%;
+}
+
+.chat li .chat-body p{
+    margin: 0;
+    color: #777777;
+}
+
+.panel-body{
+    overflow-y: scroll;
+}
+.mesaj {
+    height: 83%;
+}
+
+.video {
+    height: 620px;
+}
+
+.user{
+    height: 58%;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: dimgray;
+}
+
+.primary-font {
+    color: #3c8dbc;
+}
+
+img {
+    max-width: 100%;
+}
+
+.sag {
+    float: right;
+}
+
+.sol{
+    float:left;
+}
+
+div.alt {
+    position: absolute;
+}

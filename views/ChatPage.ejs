@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>Chat & Talk</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
+
+</head>
+
+
+
+<style>
+    .error{
+        color: red;
+    }
+    .whisper{
+        color: gray;
+        font-style: italic;
+    }
+</style>
+
+<body>
+<div id="app" style="padding-top: 1%">
+    <div style="width: 20%; height: 92%;float: left;padding-left: 1%">
+        <div class="panel panel-primary" >
+            <div class="panel-heading" id="bagliKullanici">
+            </div>
+            <ul class="panel-body user" id="users">
+            </ul>
+            <div class="panel-footer" style=" padding-bottom:17%;background: none">
+                <div>
+                    <input type="text" class="form-control odaText" id="grp-oda" placeholder="Oda ismi girin (Sohbet)">
+                    <button class="btn btn-primary" id="grp-odaGir" style="width: 49%; float:left" onclick="grpOdaGiris()">Giriş</button>
+                    <button class="btn btn-primary" id="grp-odaCik" style="width: 49%; float:right; display: none" onclick="grpOdaCikis()">Çıkış</button>
+                </div>
+                <div id="bottom-bar" >
+                    <div class="form-group" >
+                        <input type="text" class="form-control" id="kisi" placeholder="Kişi ismi girin">
+                        <input type="text" class="form-control" id="oda" placeholder="Oda ismi girin (Video)">
+                    </div>
+
+                    <a  id="odaGir" style="width: 50%" href="javascript:birebir()"><i class="fa fa-user" aria-hidden="true"></i> <span>Bire Bir Görüşme</span></a>
+                    <a  id="odaConfGir" style="width: 50%" href="javascript:conferance()" ><i class="fa fa-group" aria-hidden="true"></i> <span>Video Konferans</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 78%;height: 92%; float: right; padding-right: 1%">
+        <div id="livechat-container">
+            <div class="panel panel-primary">
+                <div id="kisiAdi" class="panel-heading">
+
+                </div>
+                <div class="panel-body mesaj" id="panel">
+                    <ul id="mesajlar" class="chat">
+                    </ul>
+                </div>
+                <div class="panel-footer" style="background: transparent">
+                    <form id="send-message">
+                        <input type="text" class="form-control input-group-lg" placeholder="Mesajınızı yazın" id="mesaj">
+                        <input type="submit" value="Mesaj Gönder" id="ozelMsgGonder" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="grp-chat" hidden>
+            <div class="panel panel-primary">
+                <div class="panel-heading" id="sayi">
+                    Group
+                </div>
+                <div class="panel-body mesaj" id="grp-panel">
+                    <ul id="grp-mesajlar" class="chat">
+
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <form id="grp-send-message">
+
+                        <input type="text" class="form-control input-group-lg" placeholder="Mesajınızı yazın" id="grp-mesaj">
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="video" hidden>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Lets Talk
+                </div>
+                <div class="panel-body video">
+
+
+                </div>
+                <div class="panel-footer" id="bilgi">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function grpOdaGiris() {
+        document.getElementById("livechat-container").hidden =true;
+        document.getElementById("video").hidden =true;
+        document.getElementById("grp-chat").hidden =false;
+    }
+    function grpOdaCikis() {
+        document.getElementById("livechat-container").hidden =false;
+        document.getElementById("video").hidden =true;
+        document.getElementById("grp-chat").hidden =true;
+    }
+
+</script>
+<script language="JavaScript">
+    function birebir()
+    {
+        var odaID = $('#oda').val();
+        var str = 'https://localhost:3000/goruntu!' + odaID;
+        window.open(str,'blank');
+    }
+</script>
+<script language="JavaScript">
+    function conferance()
+    {
+        var odaID = $('#oda').val();
+        var str = 'https://localhost:3000/conference!' + odaID;
+        window.open(str,'blank');
+    }
+</script>
+<script src="/public/js/socket.io.js"></script>
+<script type="text/javascript" src="/public/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/public/js/Chatpagee.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

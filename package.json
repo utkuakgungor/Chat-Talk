@@ -1,0 +1,30 @@
+{
+  "name": "chatcam",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "~1.18.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "express-session": "~1.14.1",
+    "jquery": "^3.4.0",
+    "location-href": "^1.0.0",
+    "method-override": "~2.3.6",
+    "mongoose": "^4.13.6",
+    "morgan": "~1.9.1",
+    "nodemon": "^1.12.1",
+    "passport": "~0.3.2",
+    "passport-local": "~1.0.0",
+    "serve-favicon": "~2.4.5",
+    "session.socket.io": "^0.2.1",
+    "socket.io": "^2.0.4"
+  }
+}
