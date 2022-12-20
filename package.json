@@ -21,7 +21,7 @@
     "mongoose": ">=5.13.15",
     "morgan": "~1.9.1",
     "nodemon": "^1.12.1",
-    "passport": "~0.3.2",
+    "passport": ">=0.6.0",
     "passport-local": "~1.0.0",
     "serve-favicon": "~2.4.5",
     "session.socket.io": "^0.2.1",
