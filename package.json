@@ -12,7 +12,7 @@
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "ejs": "~2.5.7",
+    "ejs": "~3.1.7",
     "express": "~4.17.3",
     "express-session": "~1.14.1",
     "jquery": "^3.4.0",
