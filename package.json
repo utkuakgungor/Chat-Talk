@@ -13,7 +13,7 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
-    "express": "~4.15.5",
+    "express": "~4.17.3",
     "express-session": "~1.14.1",
     "jquery": "^3.4.0",
     "location-href": "^1.0.0",
